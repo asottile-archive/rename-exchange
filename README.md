@@ -7,15 +7,29 @@ rename-exchange
 a tiny wrapper around `renameat2(...)` and `RENAME_EXCHANGE` to do
 **atomic (directory) replacement**
 
-### installation
+### building
 
-```bash
-go get github.com/asottile/rename-exchange
-```
+#### precompiled
 
-or see [the releases tab] for precompiled binaries.
+see [the releases tab] for precompiled binaries.
 
 [the releases tab]: https://github.com/asottile/rename-exchange/releases
+
+#### with musl
+
+smaller, static
+
+```bash
+musl-gcc -O3 -s -static main.c -o rename-exchange
+```
+
+#### with classic gcc
+
+larger, dynamically linked
+
+```bash
+gcc -O3 -s main.c -o rename-exchange
+```
 
 ### support
 
