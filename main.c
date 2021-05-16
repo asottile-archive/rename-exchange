@@ -1,5 +1,12 @@
 #include <fcntl.h>
 #include <stdio.h>
+#include <sys/syscall.h>
+#include <unistd.h>
+
+/* musl libc does not define RENAME_EXCHANGE */
+#ifndef RENAME_EXCHANGE
+#define RENAME_EXCHANGE 2
+#endif
 
 int main(int argc, char** argv) {
     for (int i = 1; i < argc; i += 1) {
@@ -13,7 +20,8 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    if (renameat2(AT_FDCWD, argv[1], AT_FDCWD, argv[2], RENAME_EXCHANGE)) {
+    /* musl libc does not have renameat2(...) */
+    if (syscall(SYS_renameat2, AT_FDCWD, argv[1], AT_FDCWD, argv[2], RENAME_EXCHANGE)) {
         perror(NULL);
         return 1;
     } else {

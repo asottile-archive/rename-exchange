@@ -10,5 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: gcc -D_GNU_SOURCE -s -O3 main.c -o rename-exchange
+    - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends musl-tools
+    - run: musl-gcc -s -O3 -static main.c -o rename-exchange
     - run: ./test.sh
