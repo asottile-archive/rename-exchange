@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-go@v2
-    - run: go build -trimpath -ldflags='-s -w'
+    - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends musl-tools
+    - run: musl-gcc -s -O3 -static main.c -o rename-exchange
     - run: ./test.sh
