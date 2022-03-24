@@ -1,5 +1,5 @@
 [![Build Status](https://github.com/asottile/rename-exchange/workflows/main/badge.svg)](https://github.com/asottile/rename-exchange/actions)
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/asottile/rename-exchange/master.svg)](https://results.pre-commit.ci/latest/github/asottile/rename-exchange/master)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/asottile/rename-exchange/main.svg)](https://results.pre-commit.ci/latest/github/asottile/rename-exchange/main)
 
 rename-exchange
 ===============
