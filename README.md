@@ -1,3 +1,9 @@
+# ARCHIVED
+
+it is feature complete and I don't plan on updating it further
+
+___
+
 [![Build Status](https://github.com/asottile/rename-exchange/actions/workflows/main.yml/badge.svg)](https://github.com/asottile/rename-exchange/actions)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/asottile/rename-exchange/main.svg)](https://results.pre-commit.ci/latest/github/asottile/rename-exchange/main)
 
